@@ -1,15 +1,15 @@
-const route = require('express').Router() 
+const route = require("express").Router();
 
-route.get('/', (req,res) => {
-    res.json({
-        message: "Home Page"
-    })
-})
+route.get("/", (req, res) => {
+  res.json({
+    message: "Home Page",
+  });
+});
 
-const userRoutes = require('./user')
-const itemRoutes = require('./item')
+const userRoutes = require("./user");
+const itemRoutes = require("./item");
 
-route.use('/items', itemRoutes)
-route.use('/users', userRoutes)
+route.use("/items", itemRoutes);
+route.use("/users", userRoutes);
 
-module.exports = route
+module.exports = route;
